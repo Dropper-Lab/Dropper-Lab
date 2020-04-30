@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropper Lab</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/gradient.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/dist/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/animate.css">
+    <script>
+        var agent = navigator.userAgent.toLowerCase();
+        if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+            location.href = "upgradeNow.html";
+        }
+    </script>
+</head>
+
+<body class="bg-light">
+    <div class="main bg-dark landing1" id="sloganDiv">
+        <div class="landing-text">
+            <h1 class="main-logo-text">
+                <span class="gradient-jshine rotate" id="slogan"></span>
+            </h1>
+            <h3 class="lead" id="lead1">
+                <span id="sloganLead" class="text-white">We will make cyber world safe.</span>
+            </h3>
+        </div>
+    </div>
+    <nav class="navbar navbar-light w-auto fixed-bottom d-flex justify-content-center">
+        <div class="shadow-lg rounded container bg-light w-100 mb-1 animated" id="BrandNavbar">
+            <div class="d-inline-block align-top">
+                <a class="navbar-brand p-3" href="#main">
+                    <img src="/assets/img/dropper-black-dist.png" width="30" height="30" alt="">
+                    Dropper Lab
+                </a>
+                <span class="d-none d-sm-inline">
+                    <a href="#intro" class="pr-1">Intro</a>
+                    <a href="javascript:void();" class="text-dark"> | </a>
+                    <a href="#researchers" class="pr-1">Researchers</a>
+                    <a href="javascript:void();" class="text-dark"> | </a>
+                    <a href="#projects" class="pr-1">Projects</a>
+                </span>
+            </div>
+            <button type="button" class="close d-flex justify-content-end mr-2" aria-label="Close" id="closeNavbar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </nav>
+    <div class="main bg-light" id="main">
+        <div class="landing-text">
+            <h1 class="main-logo-text">
+                <span class="gradient-jshine" id="branding">Dropper Lab</span>
+            </h1>
+            <h3 class="main-logo-lead" id="brandingLead">We're <span id="mainTypo" class="gradient-jshine"></span>.</h3>
+        </div>
+    </div>
+    <div class="row ml-3 mr-3" id="contentDiv">
+        <div class="p-5 mb-3 col-lg-5 col-md-6 col-sm-12 col-12" id="intro">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="font-Montserrat bolder">Introduction</h1>
+                    <p class="font-Montserrat lead">Introduction of our research group.</p>
+                </div>
+
+                <div class="col-lg-4 col-md-3 col-sm-12 col-12">
+                    <img class="pt-3 pb-3 img-pad mx-auto d-block" src="/assets/img/dropper-black-dist.png?v=1"
+                        alt="Dropper Logo (Black)">
+                </div>
+                <div class="col-lg-8 col-md-9 col-sm-12 col-12">
+                    <p class="h4 bold">Our goal is...</p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white shadow rounded p-5 mb-3 col-md-12" id="researchers">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <h1 class="font-Montserrat bolder">Researchers</h1>
+                    <p class="font-Montserrat lead">Profile of our researchers</p>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn">
+                    <div class="shadow rounded pl-4 pr-4 pt-4 pb-4 mb-4">
+                        <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
+                            src="/assets/img/avatars/joon.jpg?v=1">
+                        <h3 class="text-center team-profile-name bold">Joon</h3>
+                        <p class="text-primary text-center mb-2">Web Hacking</p>
+                        <p class="text-center text-muted">Hello World</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn">
+                    <div class="shadow rounded pl-4 pr-4 pt-4 pb-4 mb-4">
+                        <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
+                            src="/assets/img/avatars/beercat.jpg?v=1">
+                        <h3 class="text-center team-profile-name bold">Beercat</h3>
+                        <p class="text-primary text-center mb-2">Digital Forensics</p>
+                        <p class="text-center text-muted">꽈배기 먹고 싶따</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn">
+                    <div class="shadow rounded pl-4 pr-4 pt-4 pb-4 mb-4">
+                        <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
+                            src="/assets/img/avatars/sancheon.png?v=1">
+                        <h3 class="text-center team-profile-name bold">SH:D_Sancheon</h3>
+                        <p class="text-primary text-center mb-2">Digital Forensics</p>
+                        <p class="text-center text-muted">서울 어딘가에서 살아숨쉬는 괴발자</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn">
+                    <div class="shadow rounded pl-4 pr-4 pt-4 pb-4 mb-4">
+                        <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
+                            src="/assets/img/avatars/hwanggumi.png?v=1">
+                        <h3 class="text-center team-profile-name bold">Xixon</h3>
+                        <p class="text-primary text-center mb-2">System Hacking</p>
+                        <p class="text-center text-muted">Hello World</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn">
+                    <div class="shadow rounded pl-4 pr-4 pt-4 pb-4 mb-4">
+                        <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
+                            src="/assets/img/nyan.png?v=1">
+                        <h3 class="text-center team-profile-name bold">이도현</h3>
+                        <p class="text-primary text-center mb-2">System Hacking</p>
+                        <p class="text-center text-muted">Pwnable, Crypto 공부하는 학생입니다! 열심히 하겠습니다 :)</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn">
+                    <div class="shadow rounded pl-4 pr-4 pt-4 pb-4 mb-4">
+                        <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
+                            src="/assets/img/nyan.png?v=1">
+                        <h3 class="text-center team-profile-name bold">nulLeeKH</h3>
+                        <p class="text-primary text-center mb-2">Cryptography</p>
+                        <p class="text-center text-muted">Hello World</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn">
+                    <div class="shadow rounded pl-4 pr-4 pt-4 pb-4 mb-4">
+                        <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
+                            src="/assets/img/nyan.png?v=1">
+                        <h3 class="text-center team-profile-name bold">TLparche</h3>
+                        <p class="text-primary text-center mb-2">Cryptography</p>
+                        <p class="text-center text-muted">Hello World</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white shadow rounded p-5 mb-3 col-md-12" id="projects">
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <h1 class="font-Montserrat bolder">Projects</h1>
+                    <p class="font-Montserrat lead">Our public projects</p>
+                </div>
+                <div class="shadow rounded col-lg-3 col-md-4 col-sm-12 col-12">
+                    <img class="rounded img-thumbnail team-profile-avatar mx-auto d-block"
+                        src="/assets/img/avatars/projects/cveExp.png">
+                    <h3 class="text-center team-profile-name bold">CVE Search engine</h3>
+                    <p class="text-primary text-center mb-2">CVE Explorer</p>
+                    <p class="text-center text-muted">Integrated CVE search system</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/dist/jquery-3.4.1.min.js"></script>
+    <script src="/assets/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/dist/typed.min.js"></script>
+    <script src="/assets/dist/smoothscroll-default.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"
+        integrity="sha256-CfyPGYLRQ4v1O+mZa5ocQglABXGuaZmmfe8awy8Fxis=" crossorigin="anonymous"></script>
+    <script>
+        $("#main").hide();
+        $("#contentDiv").hide();
+        $("#BrandNavbar").hide();
+        const animDelay = 2000;
+        const animDuration = 500;
+        var typed = new Typed('#slogan', {
+            strings: ['NO MORE<br>SECURITY<br>THREATS'],
+            onComplete: function (self) {
+                setTimeout(function () {
+                    setTimeout(function () {
+                        $("#sloganDiv").hide();
+                        $("#BrandNavbar").addClass("fadeInUp");
+                        $("#BrandNavbar").show();
+                    }, 600);
+                    $("#main").show();
+                    $("#contentDiv").show();
+                    $('html').animate({
+                        scrollTop: $('#main').offset().top
+                    }, animDuration, function () {
+                        var typed3 = new Typed('#mainTypo', {
+                            strings: ['finding vulnerabillities',
+                                'running awesome projects',
+                                'protecting cyber security',
+                                'not a cracker', 'Dropper Lab'
+                            ],
+                            typeSpeed: 30,
+                            backSpeed: 30,
+                            loop: false
+                        });
+                    });
+                }, animDelay);
+            },
+            typeSpeed: 45,
+            smartBackspace: true,
+        });
+        $("#closeNavbar").click(function () {
+            $("#BrandNavbar").addClass("fadeOutDown");
+            console.log("[Navbar Handler] Asked for close.")
+            if (confirm("Close navigation bar?")) {
+                $("#BrandNavbar").removeClass("fadeInUp");
+                $("#BrandNavbar").addClass("fadeOutDown");
+                setTimeout(function () {
+                    $("#BrandNavbar").hide();
+                    console.log("[Navbar Handler] Closed.")
+                }, 600);
+            }
+        });
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                $("#BrandNavbar").removeClass("fadeOutDown");
+                $("#BrandNavbar").addClass("fadeInUp");
+            } else {
+                $("#BrandNavbar").removeClass("fadeInUp");
+                $("#BrandNavbar").addClass("fadeOutDown");
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+
+</html>

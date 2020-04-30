@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Vice City Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Vice City Sans Regular'), url('../fonts/ViceCitySans.woff') format('woff');
+}
+
+::selection {
+    background-color: black;
+    color: lightgreen !important;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.landing-text {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-logo-text {
+    font-size: 9vh;
+    font-family: 'Vice City Sans Regular';
+    font-weight: normal;
+    width: auto !important;
+}
+
+.main-logo-lead {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.rounded {
+    border-radius: 10px 10px 10px 10px !important;
+}
+
+.img-pad {
+    width: 50% !important;
+}
+
+.team-profile-name {
+    margin-top: 1em;
+}
+
+.team-profile-avatar {}
+
+.team-profile-modal {
+    max-width: 700px !important
+}
+
+.team-profile-modal .table th{
+    padding: .2rem !important;
+}
+
+.team-profile-modal-pic {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.prof{
+    width: 99%;
+    margin-right: 1%;
+}
