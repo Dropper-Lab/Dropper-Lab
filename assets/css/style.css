@@ -5,6 +5,20 @@
     src: local('Vice City Sans Regular'), url('../fonts/ViceCitySans.woff') format('woff');
 }
 
+/*
+    Dropper Lab Design Engine V2
+ */
+
+.team-profile-text-card{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+/*
+    Outdated
+ */
+
 ::selection {
     background-color: black;
     color: lightgreen !important;
@@ -62,6 +76,9 @@ body {
 .team-profile-name {
     margin-top: 1em;
 }
+
+
+
 
 .team-profile-avatar {}
 
