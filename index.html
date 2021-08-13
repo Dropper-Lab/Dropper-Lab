@@ -6,48 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dropper Lab</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/gradient.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/dist/font-awesome/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./assets/dist/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/gradient.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <link rel="stylesheet" type="text/css" href="./assets/dist/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
     <script>
-        var agent = navigator.userAgent.toLowerCase();
-        if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+        let agent = navigator.userAgent.toLowerCase();
+        if ((navigator.appName === 'Netscape' && agent.indexOf('trident') !== -1) || (agent.indexOf("msie") !== -1)) {
             location.href = "upgradeNow.html";
         }
     </script>
 </head>
 
 <body class="bg-light">
-    <div class="main bg-dark landing1" id="sloganDiv">
-        <div class="landing-text">
-            <h1 class="main-logo-text">
-                <span class="gradient-jshine rotate" id="slogan"></span>
-            </h1>
-            <h3 class="lead" id="lead1">
-                <span id="sloganLead" class="text-white">We will make cyber world safe.</span>
-            </h3>
-        </div>
-    </div>
     <nav class="navbar navbar-light w-auto fixed-bottom d-flex justify-content-center">
-        <div class="shadow-lg rounded container bg-light w-100 mb-1 animated" id="BrandNavbar">
+        <div class="shadow-lg rounded container bg-light w-100 p-2 mb-1 animated" id="BrandNavbar">
             <div class="d-inline-block align-top">
                 <a class="navbar-brand p-3" href="#main">
                     <img src="./assets/img/dropper-black-dist.png" width="30" height="30" alt="">
                     Dropper Lab
                 </a>
                 <span class="d-none d-sm-inline">
-                    <a href="#intro" class="pr-1">Intro</a>
+                    <a href="#intro" class="pr-1 text-muted text-decoration-none">Intro</a>
                     <a href="javascript:;" class="text-dark"> | </a>
-                    <a href="#researchers" class="pr-1">Researchers</a>
+                    <a href="#researchers" class="pr-1 text-muted text-decoration-none">Researchers</a>
                     <a href="javascript:;" class="text-dark"> | </a>
-                    <a href="#projects" class="pr-1">Projects</a>
+                    <a href="#projects" class="pr-1 text-muted text-decoration-none">Projects</a>
                 </span>
             </div>
-            <button type="button" class="close d-flex justify-content-end mr-2" aria-label="Close" id="closeNavbar">
+            <button type="button" class="close d-flex justify-content-end mr-2 btn" aria-label="Close" id="closeNavbar">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
@@ -216,77 +205,10 @@
             </div>
         </div>
     </div>
-    <script src="./assets/dist/jquery-3.4.1.min.js"></script>
-    <script src="./assets/dist/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/dist/bootstrap/js/bootstrap.bundle.js"></script>
     <script src="./assets/dist/typed.min.js"></script>
     <script src="./assets/dist/smoothscroll-default.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js"
-        integrity="sha256-CfyPGYLRQ4v1O+mZa5ocQglABXGuaZmmfe8awy8Fxis=" crossorigin="anonymous"></script>
-    <script>
-        $("#main").hide();
-        $("#contentDiv").hide();
-        $("#BrandNavbar").hide();
-        const animDelay = 2000;
-        const animDuration = 500;
-        (new Typed('#slogan', {
-            strings: ['WE\'RE<br>TRENDY<br>EXPERTS'],
-            onComplete: function (self) {
-                setTimeout(function () {
-                    setTimeout(function () {
-                        $("#sloganDiv").hide();
-                        $("#BrandNavbar").addClass("fadeInUp");
-                        $("#BrandNavbar").show();
-                    }, 600);
-                    $("#main").show();
-                    $("#contentDiv").show();
-                    $('html').animate({
-                        scrollTop: $('#main').offset().top
-                    }, animDuration, function () {
-                        (new Typed('#mainTypo', {
-                            strings: [
-                                'improving the life',
-                                'finding vulnerability',
-                                'running awesome projects',
-                                'trendy researchers',
-                                'Dropper Lab'
-                            ],
-                            typeSpeed: 30,
-                            backSpeed: 30,
-                            loop: false
-                        }));
-                    });
-                }, animDelay);
-            },
-            typeSpeed: 45,
-            smartBackspace: true,
-        }));
-        $("#closeNavbar").click(function () {
-            $("#BrandNavbar").addClass("fadeOutDown");
-            console.log("[Navbar Handler] Asked for close.")
-            if (confirm("Close navigation bar?")) {
-                $("#BrandNavbar").removeClass("fadeInUp");
-                $("#BrandNavbar").addClass("fadeOutDown");
-                setTimeout(function () {
-                    $("#BrandNavbar").hide();
-                    console.log("[Navbar Handler] Closed.");
-                }, 600);
-            }else{
-                console.log("[Navbar Handler] Answer : Negative.");
-            }
-        });
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                $("#BrandNavbar").removeClass("fadeOutDown");
-                $("#BrandNavbar").addClass("fadeInUp");
-            } else {
-                $("#BrandNavbar").removeClass("fadeInUp");
-                $("#BrandNavbar").addClass("fadeOutDown");
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
+    <script type="text/javascript" src="./assets/js/index.js"></script>
 </body>
 
 </html>
