@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Vice City Sans Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Vice City Sans Regular'), url('/fonts/ViceCitySans.woff') format('woff');
+}
+
+*{
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.font-logo{
+  font-family: "Vice City Sans", serif;
+}
+
+.pointer{
+    cursor: pointer;
+}

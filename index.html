@@ -1,214 +1,191 @@
 <!DOCTYPE html>
-<html lang="ko">
-
+<html lang="ko" class="hidden">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dropper Lab</title>
-    <link rel="stylesheet" type="text/css" href="./assets/dist/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/gradient.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
-    <link rel="stylesheet" type="text/css" href="./assets/dist/font-awesome/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/animate.css">
-    <script>
-        let agent = navigator.userAgent.toLowerCase();
-        if ((navigator.appName === 'Netscape' && agent.indexOf('trident') !== -1) || (agent.indexOf("msie") !== -1)) {
-            location.href = "upgradeNow.html";
-        }
-    </script>
+    <link rel='stylesheet' href='./stylesheets/wind.css'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <script src="./javascripts/typed.min.js"></script>
 </head>
-
-<body class="bg-light">
-    <nav class="navbar navbar-light w-auto fixed-bottom d-flex justify-content-center">
-        <div class="shadow-lg rounded container bg-light w-100 p-2 mb-1 animated" id="BrandNavbar">
-            <div class="d-inline-block align-top">
-                <a class="navbar-brand p-3" href="#main">
-                    <img src="./assets/img/dropper-black-dist.png" width="30" height="30" alt="">
-                    Dropper Lab
-                </a>
-                <span class="d-none d-sm-inline">
-                    <a href="#intro" class="pr-1 text-muted text-decoration-none">Intro</a>
-                    <a href="javascript:;" class="text-dark"> | </a>
-                    <a href="#researchers" class="pr-1 text-muted text-decoration-none">Researchers</a>
-                    <a href="javascript:;" class="text-dark"> | </a>
-                    <a href="#projects" class="pr-1 text-muted text-decoration-none">Projects</a>
-                </span>
-            </div>
-            <button type="button" class="close d-flex justify-content-end mr-2 btn" aria-label="Close" id="closeNavbar">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    </nav>
-    <div class="main bg-light" id="main">
-        <div class="landing-text">
-            <h1 class="main-logo-text">
-                <span class="gradient-jshine" id="branding">Dropper Lab</span>
-            </h1>
-            <h3 class="main-logo-lead" id="brandingLead">We're <span id="mainTypo" class="gradient-jshine"></span>.</h3>
-        </div>
+<body class="bg-white dark:bg-gray-900 pl-5 pr-5 md:pl-20 md:pr-20">
+<!-- Top -->
+<div class="fixed top-0 left-0 right-0 pl-5 pr-5 md:pl-20 md:pr-20 mt-5 text-gray-900 dark:text-white flex">
+    <div class="bg-white dark:bg-gray-900 bg-opacity-60 dark:bg-opacity-60 backdrop-filter backdrop-blur-lg w-auto p-3 rounded-lg flex">
+        <img src="./images/logo/dark.svg" alt="Dropper Logo" class="h-6 md:h-8" id="logoSpace">
+        <p class="w-auto text-xl md:text-2xl ml-3 font-logo mt-0 md:mt-1">Dropper Lab</p>
     </div>
-    <div class="p-4 p-md-4">
-        <div class="row" id="contentDiv">
-            <!--
-            <div class="bg-white shadow rounded p-3 p-md-4 mb-3 col-md-12" id="introduction">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="font-Montserrat bolder">Introduction</h1>
-                        <p class="font-Montserrat lead">Introduction of our research group.</p>
-                    </div>
-
-                    <div class="col-lg-4 col-md-3 col-sm-12 col-12">
-                        <img class="pt-3 pb-3 img-pad mx-auto d-block" src="./assets/img/dropper-black-dist.png"
-                            alt="Dropper Logo (Black)">
-                    </div>
-                    <div class="col-lg-8 col-md-9 col-sm-12 col-12">
-                        <p class="h4 bold">Dropper Lab은 개발과 보안 연구를 병행하는 복합 연구단체입니다.</p>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-            -->
-            <div class="bg-white shadow rounded p-3 p-md-4 mb-3 col-md-12" id="researchers">
-                <div class="row">
-                    <div class="col-md-12 mb-3 align-middle">
-                        <h1 class="font-Montserrat bolder">Researchers</h1>
-                        <p class="font-Montserrat lead">Profile of our researchers</p>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/avatars/joon.jpg">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">Joon</h3>
-                                <p class="text-primary mb-2">Dropper Lab Executive</p>
-                                <p class="text-muted mb-0">Hello World</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/nyan.png">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">TLparche</h3>
-                                <p class="text-primary mb-2">Dropper Sec. Executive</p>
-                                <p class="text-muted mb-0">Hello World</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/nyan.png">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">LeeSH</h3>
-                                <p class="text-primary mb-2">Dropper Sec. Executive</p>
-                                <p class="text-muted mb-0">Hello World</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/nyan.png">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">NulLeeKH</h3>
-                                <p class="text-primary mb-2">Dropper Dev. Executive</p>
-                                <p class="text-muted mb-0">Hello World</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/avatars/beercat.jpg">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">Beercat</h3>
-                                <p class="text-primary mb-2">Dropper API Management</p>
-                                <p class="text-muted mb-0">꽈배기 먹고 싶따</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/avatars/sancheon.png">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">SH:D_Sancheon</h3>
-                                <p class="text-primary mb-2">Dropper API Supporter</p>
-                                <p class="text-muted mb-0">서울 어딘가에서 살아숨쉬는 괴발자</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/avatars/kimain.jpg">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">KimAin</h3>
-                                <p class="text-primary mb-2">Dropper Sec.</p>
-                                <p class="text-muted mb-0">암호학을 공부하고 있는 초보 코더입니다.</p>
-                            </div>
-                        </div>
+    <div class="ml-auto bg-white dark:bg-gray-900 bg-opacity-60 dark:bg-opacity-60 backdrop-filter backdrop-blur-lg w-auto p-3 rounded-lg flex shadow-md dark:shadow-none hidden md:block pointer" id="toggleDarkMode-desktop">
+        <a class="h-6 w-6 md:h-8 md:w-8 grid content-center place-content-center cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+            </svg>
+        </a>
+    </div>
+</div>
+<!-- Bottom -->
+<div class="fixed bottom-0 right-0 pr-5 pb-5 md:pr-20 text-gray-900 dark:text-white">
+    <div class="ml-auto bg-white dark:bg-gray-900 bg-opacity-60 dark:bg-opacity-60 backdrop-filter backdrop-blur-lg w-auto p-3 rounded-lg flex shadow-md dark:shadow-none block md:hidden" id="toggleDarkMode-mobile">
+        <a class="h-6 w-6 md:h-8 md:w-8 grid content-center place-content-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="h-6" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+            </svg>
+        </a>
+    </div>
+</div>
+<!-- Main content -->
+<section class="h-screen grid content-center place-content-start xl:place-content-center uppercase">
+    <div class="flex-none xl:flex text-4xl md:text-5xl lg:text-6xl font-medium w-fit">
+        <p class="text-gray-900 dark:text-white grid content-center mb-7 xl:mb-0">We are </p>
+        <p class="bg-gray-900 dark:bg-white text-white dark:text-gray-900 p-2 pl-3 pr-3 font-bold xl:ml-3 xl:mr-3 rounded-lg">
+            <span id="teamKeywords"></span>
+        </p>
+        <p class="text-gray-900 dark:text-white grid content-center mt-7 xl:mt-0">Researchers</p>
+    </div>
+</section>
+<!--
+<section class="h-screen pt-24 text-white">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white capitalize">About us</h1>
+    <div class="mt-8">
+        123
+    </div>
+</section>
+-->
+<section class="h-100 md:h-screen pt-24 text-white">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Researchers</h1>
+    <div class="mt-10 overflow-y-auto">
+        <h2 class="text-2xl overline text-black dark:text-white font-bold">Executives</h2>
+        <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5">
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="./images/profiles/joon.jpg">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Joonyoung, Jeong</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Founder</span>
                     </div>
                 </div>
             </div>
-            <div class="bg-white shadow rounded p-5 mb-3 col-md-12" id="projects">
-                <div class="row">
-                    <div class="col-md-12 mb-3">
-                        <h1 class="font-Montserrat bolder">Projects</h1>
-                        <p class="font-Montserrat lead">Our public projects</p>
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="./images/profiles/erin.jpg">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Taeyang, Kim</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Co-Founder</span>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/dropper-black-dist.png">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">Dropper CVE</h3>
-                                <p class="text-primary mb-2">CVE Explorer</p>
-                                <p class="text-muted mb-0">쉽고 빠르게 관련 CVE를 검색하고 조회할 수 있는 검색 엔진입니다.</p>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="./images/profiles/parche.jpg">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Dongho, Shin</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Co-Founder</span>
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-12 col-12 animated bounceIn mb-3">
-                        <div class="m-1 m-md-0 shadow rounded row pb-2 pt-4 p-md-0">
-                            <div class="col-12 col-md-4 p-2 team-profile-text-card">
-                                <img class="rounded-circle img-thumbnail team-profile-avatar mx-auto d-block"
-                                     src="./assets/img/dropper-black-dist.png">
-                            </div>
-                            <div class="col-md-8 p-2 team-profile-text-card p-3 p-md-0">
-                                <h3 class="bold mb-0">Dropper API</h3>
-                                <p class="text-primary mb-2">API</p>
-                                <p class="text-muted mb-0">다양한 정보를 가공하여 제공하는 API 서비스입니다.</p>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="./images/profiles/none.png">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Sanghyun, Lee</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Executive</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./assets/dist/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="./assets/dist/typed.min.js"></script>
-    <script src="./assets/dist/smoothscroll-default.js"></script>
-    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <div class="mt-10 overflow-y-auto">
+        <h2 class="text-2xl overline text-gray-500 dark:text-gray-300 font-bold">Researchers</h2>
+        <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5">
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="images/profiles/none.png">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Jonghyuk, Kim</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Researcher</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="images/profiles/leemk.jpeg">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Moongyu, Lee</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Researcher</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="images/profiles/none.png">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Yohan, Lee</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Researcher</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="images/profiles/ynokim.png">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Hoyeon, Kim</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">Researcher</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="h-100 md:h-screen pt-24 text-white">
+    <h1 class="text-4xl font-bold text-gray-900 dark:text-white">Projects</h1>
+    <div class="mt-10 overflow-y-auto">
+        <h2 class="text-2xl overline text-black dark:text-white font-bold">TBA</h2>
+        <p class="text-gray-400 mt-1">공개 예정인 프로젝트들입니다.</p>
+        <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5">
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="./images/projects/d-projects.png">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Dropper Training</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">간단한 정보보호 기초 교육을 제공합니다.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mt-10 overflow-y-auto">
+        <h2 class="text-2xl overline text-gray-500 dark:text-gray-300 font-bold">Out of Service</h2>
+        <p class="text-gray-400 mt-1">현재는 중단된 프로젝트들입니다.</p>
+        <div class="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5">
+            <div class="overflow-hidden m-2 bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="./images/projects/d-projects.png">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Dropper CVE</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">CVE 검색 솔루션</span>
+                    </div>
+                </div>
+            </div>
+            <div class="overflow-hidden m-2  bg-white dark:bg-gray-800 shadow-md ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-gray-800 dark:highlight-white/5">
+                <div class="flex items-center gap-4 p-4">
+                    <img class="w-12 h-12 rounded-full" src="./images/projects/d-projects.png">
+                    <div class="flex flex-col">
+                        <strong class="text-gray-900 text-md font-medium dark:text-gray-200">Dropper API</strong>
+                        <span class="text-gray-500 text-sm font-medium dark:text-gray-400">정부의 OpenAPI가 코로나 데이터를 제공하기 전에 관련 정보를 제공하던 API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="h-screen grid content-center">
+    <div class="text-white">
+        <div class="mb-14">
+            <p class="text-4xl mb-2 md:text-5xl font-medium text-gray-900 dark:text-white font-bold">Interested?</p>
+            <p class="text-gray-400 dark:text-gray-300">저희는 언제나 새로운 연구원님들을 반갑게 맞을 준비가 되어있습니다.</p>
+        </div>
+        <a class="text-xl bg-gray-900 dark:bg-white text-white dark:text-gray-900 p-3 pl-5 pr-5 font-medium rounded-full" href="https://forms.gle/8TmqQv3ySBabXmHb8">지원서 작성하기 →</a>
+    </div>
+</section>
+<script src="./javascripts/handlers.js"></script>
 </body>
-
 </html>
